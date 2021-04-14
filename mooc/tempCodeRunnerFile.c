@@ -7,6 +7,7 @@ int main(void)
     int nums[200];
     int small = 0, big = 0;
     int scale = 10;
+    printf("enter two num please such 16/19\n");
     while (scanf("%d/%d", &small, &big) != 2 || small >= big || small >= MAX || big < MIN)
     {
         printf("two nums small/big\n");
@@ -22,9 +23,8 @@ int main(void)
     }
 
     printf("0.");
-    if (index == 200) index--;
     int i = 0;
-    for (; i <= index; i++)
+    for (; i < index; i++)
     {
         printf("%d", nums[i]);
     }
