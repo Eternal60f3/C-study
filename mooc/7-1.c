@@ -11,7 +11,7 @@ int main(void)
 
     for (; scanf("%d %d", &power, &coe) == 2;)
     {
-        if (coe == 0)
+        if (coe == 0 && power != 0)
         {
             continue;
         }
@@ -23,12 +23,6 @@ int main(void)
         }
     }
 
-    // int l = 0;
-    // for (; l < coe_index1; l++)
-    // {
-    //     printf("%d\n", coes[l]);
-    // }
-    // printf("i");
     int p_index2 = 0;
     int s_index = 0;
     int power_coe[100][2];
@@ -51,10 +45,8 @@ int main(void)
             power_coe[s_index][0] = powers[p_index2];
             power_coe[s_index][1] = coes[p_index2];
             s_index++;
-            // printf("%dx%d\n", power_coe[0][1], power_coe[0][0]);
         }
     }
-    // printf("%d\n", power_coe[0][1]);
     int o = 0;
     int o1 = 0;
     for (o = 0; o < s_index - 1; o++)
@@ -78,42 +70,43 @@ int main(void)
         if (issorted)
             break;
     }
-    // printf("%d\n", s_index);
-    // printf("q-%d\n", power_coe[i][1]);
+
+
     int i = 0;
-    for (i = 0; i < s_index; i++)
+    for (; i < s_index; i++)
     {
-        if (i == 0)
+        int power1 = power_coe[i][0];
+        int coe1 = power_coe[i][1];
+        if (i != 0)
         {
-            if (power_coe[i][0] == 0)
+            if (coe1 < 0)
             {
-                printf("%d", power_coe[i][1]);
+                printf("-");
             }
-            else if (power_coe[i][0] == 1)
+            else if (coe1 > 0)
             {
-                printf("%dx", power_coe[i][1]);
+                printf("+");
             }
-            else if (power_coe[i][1] == 1)
-            {
-                printf("x%d", power_coe[i][0]);
-            }
-            else
-                printf("%dx%d", power_coe[i][1], power_coe[i][0]);
+        }
+        if (power1 == 0)
+        {
+            printf("%d", coe1);
+        }
+        else if (coe1 == 1 && power1 == 1)
+        {
+            printf("x");
+        }
+        else if (power1 == 1)
+        {
+            printf("%dx", coe1);
+        }
+        else if (coe1 == 1)
+        {
+            printf("x%d", power1);
         }
         else
         {
-            if (power_coe[i][0] == 0)
-                printf("+%d", power_coe[i][1]);
-            else if (power_coe[i][0] == 1)
-            {
-                printf("+%dx", power_coe[i][1]);
-            }
-            else if (power_coe[i][1] == 1)
-            {
-                printf("x%d", power_coe[i][0]);
-            }
-            else
-                printf("+%dx%d", power_coe[i][1], power_coe[i][0]);
+            printf("%dx%d", coe1, power1);
         }
     }
     return 0;
