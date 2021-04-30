@@ -1,5 +1,4 @@
 #include <stdio.h>
-#define LIMIT 24 * 60
 void main(void)
 {
     int time = 0;         // 输入的时间
