@@ -25,13 +25,11 @@ int main(void)
     if (max_count == 1)
     {
         printf("%c", symbol);
-        if (remain) {
-            printf("\n%d", remain);
-        }
+        printf("\n%d", remain);
         return 0;
     }
     print_sand_glass(max_count, symbol);
-    if (remain) printf("\n%d", remain);
+    printf("\n%d", remain);
 
     return 0;
 
