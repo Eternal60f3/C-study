@@ -1,8 +1,6 @@
 #include <stdio.h>
-#include <string.h>
-int main(void)
+void main(void)
 {
-    char string1[ ] = "hello world";
-    printf("%d", strlen(string1));
-    return 0;
+    char string1[40];
+    gets_s(string1, 12);// 为什么不能执行
 }
