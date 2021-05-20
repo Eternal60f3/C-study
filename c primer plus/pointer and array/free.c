@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <string.h>
 void main(void)
 {
-    char string1[40];
-    gets_s(string1, 12);// 为什么不能执行
+    char * string12;
+    fgets(string12, 10, stdin);
+    gets_s(string12, 10);// 为什么不能执行
 }
