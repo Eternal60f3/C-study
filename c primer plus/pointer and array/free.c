@@ -3,6 +3,8 @@
 void main(void)
 {
     char * string12;
-    fgets(string12, 10, stdin);
-    gets_s(string12, 10);// 为什么不能执行
+    if (!0)
+    {
+        printf("1");
+    }
 }
