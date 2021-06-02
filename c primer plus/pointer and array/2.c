@@ -9,7 +9,7 @@ void main(void)
     int a = 0;
     for (; a < 5; a++)
     {
-        printf("%f\n",*(data + a));
+        printf("%f\n", *(data + a));
     }
     copy_arr(data1, data, 5);
     copy_ptr(data2, data, 5);
