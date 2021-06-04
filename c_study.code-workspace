@@ -6,7 +6,9 @@
 	],
 	"settings": {
 		"files.associations": {
-			"stdio.h": "c"
+			"stdio.h": "c",
+			"iterator": "c",
+			"xutility": "c"
 		}
 	}
 }
