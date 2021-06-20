@@ -8,7 +8,16 @@
 		"files.associations": {
 			"stdio.h": "c",
 			"iterator": "c",
-			"xutility": "c"
+			"xutility": "c",
+			"memory": "c",
+			"streambuf": "c",
+			"type_traits": "c",
+			"xiosbase": "c",
+			"xlocale": "c",
+			"xlocnum": "c",
+			"xmemory": "c",
+			"xstring": "c",
+			"xtr1common": "c"
 		}
 	}
 }
