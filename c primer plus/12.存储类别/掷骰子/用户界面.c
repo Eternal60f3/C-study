@@ -7,7 +7,7 @@ void main(void)
     int status;
 
     printf("enter dice_sides\n");
-    while (scanf("%d", &sides) == 1 && sides > 2)
+    while (scanf("%d", &sides) == 1 && sides >= 2)
     {
         printf("enter once_count\n");
         if (status = scanf("%d", &once_count) != 1 && once_count < 1)
