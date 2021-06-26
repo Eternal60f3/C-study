@@ -7,7 +7,6 @@ int roll_count = 0;
 
 static int dice(int sides)
 {
-    srand((unsigned int)time(0));
     int result = rand() % sides + 1;
     roll_count++;
     return result;
@@ -15,6 +14,7 @@ static int dice(int sides)
 
 int roll_dice(int sides, int dice_count)
 {
+    srand((unsigned int)time(0));
     int total = 0;
     for (int d = 0; d < dice_count; d++)
     {
