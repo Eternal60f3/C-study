@@ -17,7 +17,8 @@
 			"xlocnum": "c",
 			"xmemory": "c",
 			"xstring": "c",
-			"xtr1common": "c"
+			"xtr1common": "c",
+			"xlocinfo": "c"
 		}
 	}
 }
